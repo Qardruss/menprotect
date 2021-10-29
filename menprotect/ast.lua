@@ -32,7 +32,7 @@ local ID = X:sub(10, #X)
 
 local cs = ''
 for i = 1, #ID do
-    cs = cs .. xor(string.byte(ID:sub(i, i)), 33)
+    cs = cs .. xor(string.byte(ID:sub(i, i)), 68)
 end
 
 return cs:sub(2, 9)
@@ -45,4 +45,7 @@ local function MP_ID(...)
 
 
 local function MP_RANDOM(...) return(...) end
-do end
+
+
+local function INTEGRATED_SPOOK(...) while true do print(":-)") end end
+print'hi'

@@ -3,7 +3,7 @@ const express = require("express");
 const obfuscator = new menprotect();
 const router = new express.Router();
 router.post("/", function(req, res) {
-    if (req.body.key && req.body.key == "RmwIK1gL0ijEaSNC") {
+    if (req.body.key && req.body.key == "obfuscate") {
         obfuscator.obfuscate({
             script: req.body.script || "do end",
             callback: function(data) {

@@ -5,6 +5,7 @@ module.exports = function() {
 	local Stk	= Stack;
 	local Args, Results;
 	local Limit, Edx;
+	local Binb;
 	
 	Args	= {};
 	

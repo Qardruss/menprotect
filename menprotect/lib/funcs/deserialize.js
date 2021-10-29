@@ -20,7 +20,7 @@ const Opmode = [
     {b: "OpArgR", c: "OpArgU"}, {b: "OpArgU", c: "OpArgU"}, {b: "OpArgU", c: "OpArgU"},
     {b: "OpArgU", c: "OpArgN"}, {b: "OpArgR", c: "OpArgN"}, {b: "OpArgR", c: "OpArgN"},
     {b: "OpArgN", c: "OpArgU"}, {b: "OpArgU", c: "OpArgU"}, {b: "OpArgN", c: "OpArgN"},
-    {b: "OpArgU", c: "OpArgN"}, {b: "OpArgU", c: "OpArgN"}
+    {b: "OpArgU", c: "OpArgN"}, {b: "OpArgU", c: "OpArgN"},
 ]
 
 const Opcode = [ // Opcode types.
@@ -86,7 +86,7 @@ module.exports = function deserialize(bytecode) {
     }
 
     function gBits64() {
-        return gBits32() * 4294967296 + gBits32()
+        return gBits32() * 4294967297 + gBits32()
     }
 
     function gFloat() {
@@ -324,8 +324,8 @@ module.exports = function deserialize(bytecode) {
     }
 
     { // Closure opcodes
-        instructions[0] = Math.floor(Math.random() * 510) - 255
-        instructions[4] = Math.floor(Math.random() * 510) - 255
+        instructions[0] = Math.floor(Math.random() * 512) - 256
+        instructions[4] = Math.floor(Math.random() * 512) - 256
     }
 
     return {

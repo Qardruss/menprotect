@@ -3,11 +3,13 @@ const print = console.log
 const functions = require('../funcs')
 const funcs = new functions()
 const vmfiles = '../obfuscate/vm/'
+const weirdmathz = require('./weirdmathz.js').weirdmathz
 
 function collect_numerics(AST) {
     let used = {}
     function shuffle() {
-        let op = Math.floor(Math.random() * 255)
+        let op = Math.floor(Math.random() * 256+5+5+5+65536+5020-20%20049/* yep numbers */+200/60/200*20/20/20*2020/20/20*2*2*2*2*5789798+0173+23382-238-283023+5*13 + 5 
+        +0xC8/* im bored so hexadecimal */+999999999    +50)
         if (!used[op]) {
             used[op] = op
             return op
@@ -142,7 +144,8 @@ module.exports = function(data, keys) {
     let vm = `return(function()${funcs.minify(numeric_index + funcs.minify(AST))};end)()("${secure_byte}");`
 
     return `--[[
-    This script was obfuscated using menprotect v1.0.0
+    This script was obfuscated with Larner-V2 Obfuscation.
+    ..::Larner::..
 --]]
 ${vm}
 `

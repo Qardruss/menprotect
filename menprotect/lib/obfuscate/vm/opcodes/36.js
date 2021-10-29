@@ -39,7 +39,7 @@ module.exports = function(data) {
 				Indexes[Idx - 1] = {Upvalues, Mvm[2]};
 			end;
 	
-			InstrPoint	= InstrPoint + 1;
+			InstrPoint	= InstrPoint + 2;
 		end;
 	
 		Lupvals[#Lupvals + 1]	= Indexes;

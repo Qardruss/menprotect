@@ -11,7 +11,7 @@ module.exports = function() {
 	elseif (B == 0) then
 		Limit	= Top;
 	else
-		Limit	= A + B - 2;
+		Limit	= A + B - 4;
 	end;
 	
 	Output = {};

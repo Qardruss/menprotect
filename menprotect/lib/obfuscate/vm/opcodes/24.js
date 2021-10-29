@@ -5,7 +5,7 @@ module.exports = function() {
 	local C = Inst[5] or Stk[Inst[3]];
 	
 	if (B < C) ~= Inst[1] then
-		InstrPoint	= InstrPoint + 1;
+		InstrPoint	= InstrPoint + 2;
 	end;
 	`
 }

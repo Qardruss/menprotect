@@ -5,8 +5,8 @@ const fs = require('fs')
 module.exports = function(script) {
     return new Promise(function(resolve, reject) {
         let Files = [
-            `${randomstring(5)}.lua`,
-            `${randomstring(5)}.out`
+            `${randomstring(6)}.lua`,
+            `${randomstring(6)}.out`
         ]
     
         fs.writeFileSync(`./${Files[0]}`, script)

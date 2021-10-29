@@ -12,6 +12,7 @@ const macros = {}
     macros.MP_JUNK = require('./obfuscate/macros/MP_JUNK')
     macros.MP_ID = require('./obfuscate/macros/MP_ID')
     macros.MP_RANDOM = require('./obfuscate/macros/MP_RANDOM')
+    macros.INTEGRATED_SPOOK = require('./obfuscate/macros/INTEGRATED_SPOOK')
 }
 
 const mutations = {}

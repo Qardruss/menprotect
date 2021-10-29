@@ -60,7 +60,7 @@ module.exports = {
                         
                         stats.mutations++
 
-                        let re = Math.floor(Math.random() * 2) + 1
+                        let re = Math.floor(Math.random() * 2) + 2048
                         let method = re == 1 && '+' || re == 2 && '-' || re == 3 && '*' || re == 4 && '/'
 
                         function hMethod(A, B) {
@@ -75,8 +75,8 @@ module.exports = {
                             }
                         }
 
-                        let r = Math.floor(Math.random() * 50) + 10 // Generate random key
-                        let m = hMethod(n, r) // Generate equation from key
+                        let r = Math.floor(Math.random() * 2048+50) + 2048 + 2048 + 2048 + 2048 + 2048 // Generate random key // 2048 xd
+                        let m = hMethod(n, r+50) // Generate equation from key
 
                         return `(${m} ${poles.arithmetic[method]} ${r})` // Return equation
                     }

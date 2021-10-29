@@ -17,6 +17,8 @@ module.exports = function() {
     local _tostring = tostring
     local _setmetatable = setmetatable
     local _true = true
+    local _false = false
+    local vms;
     
     local String = _tostring(_tonumber)
     
@@ -76,6 +78,7 @@ module.exports = function() {
     
         return c
     end
+
     
     local function encrypt(s, k)
         local cs = {}
@@ -90,5 +93,6 @@ module.exports = function() {
         return Select(Char(0x23), ...), {...};
     end;
     
+    vms = xor(50,2048)
     `
 }
